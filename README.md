@@ -12,11 +12,11 @@ In this phase, I implemented the basic object storage system.
 It stores blobs using SHA-256 hashing and organizes them inside `.pes/objects`.
 
 ### Screenshot 1A: Test Objects Output
-![Phase1_1A](<img width="1600" height="297" alt="image" src="https://github.com/user-attachments/assets/2c04779c-5cf6-4af0-9d49-097175f6298b" />
+(<img width="1600" height="297" alt="image" src="https://github.com/user-attachments/assets/2c04779c-5cf6-4af0-9d49-097175f6298b" />
 )
 
 ### Screenshot 1B: Object Storage Structure
-![Phase1_1B](<img width="1600" height="163" alt="image" src="https://github.com/user-attachments/assets/5f6ab5b5-92b6-484b-9e87-5c57765da205" />
+(<img width="1600" height="163" alt="image" src="https://github.com/user-attachments/assets/5f6ab5b5-92b6-484b-9e87-5c57765da205" />
 )
 
 ---
@@ -27,11 +27,11 @@ Here, I worked on tree objects which represent directory structure.
 The tree is built from entries and then serialized and stored.
 
 ### Screenshot 2A: Test Tree Output
-![Phase2_2A](<img width="1600" height="265" alt="image" src="https://github.com/user-attachments/assets/c5d32492-3a90-4367-8b79-c8bd66faf06b" />
+(<img width="1600" height="265" alt="image" src="https://github.com/user-attachments/assets/c5d32492-3a90-4367-8b79-c8bd66faf06b" />
 )
 
 ### Screenshot 2B: Raw Tree Object
-![Phase2_2B](<img width="1600" height="155" alt="image" src="https://github.com/user-attachments/assets/80ea0264-a007-4157-98f4-c969a6d5178e" />
+(<img width="1600" height="155" alt="image" src="https://github.com/user-attachments/assets/80ea0264-a007-4157-98f4-c969a6d5178e" />
 )
 
 ---
@@ -42,11 +42,11 @@ In this phase, I implemented the staging area (index).
 It keeps track of files that are added before committing.
 
 ### Screenshot 3A: Init → Add → Status
-![Phase3_3A](<img width="1600" height="882" alt="image" src="https://github.com/user-attachments/assets/109061a1-34d2-4e72-96d6-dee441264efa" />
+(<img width="1600" height="882" alt="image" src="https://github.com/user-attachments/assets/109061a1-34d2-4e72-96d6-dee441264efa" />
 )
 
 ### Screenshot 3B: Index File Content
-![Phase3_3B](<img width="1600" height="74" alt="image" src="https://github.com/user-attachments/assets/a9887611-43d9-4156-b430-c0ff0cf7510e" />
+(<img width="1600" height="74" alt="image" src="https://github.com/user-attachments/assets/a9887611-43d9-4156-b430-c0ff0cf7510e" />
 )
 
 ---
@@ -57,15 +57,15 @@ This phase handles commit creation and history tracking.
 Each commit stores metadata like author, message, and tree reference.
 
 ### Screenshot 4A: Log Output
-![Phase4_4A](<img width="1600" height="819" alt="image" src="https://github.com/user-attachments/assets/90d6c21e-2f1b-4e4f-a383-fd260a4cc797" />
+(<img width="1600" height="819" alt="image" src="https://github.com/user-attachments/assets/90d6c21e-2f1b-4e4f-a383-fd260a4cc797" />
 )
 
 ### Screenshot 4B: Object Growth
-![Phase4_4B](<img width="1600" height="399" alt="image" src="https://github.com/user-attachments/assets/7d03f5e3-5894-4b0b-9b8e-e2ce2c44bd54" />
+(<img width="1600" height="399" alt="image" src="https://github.com/user-attachments/assets/7d03f5e3-5894-4b0b-9b8e-e2ce2c44bd54" />
 )
 
 ### Screenshot 4C: HEAD and Branch Reference
-![Phase4_4C](<img width="1600" height="146" alt="image" src="https://github.com/user-attachments/assets/325fd7ae-8be1-4339-9191-11906880f0a0" />
+(<img width="1600" height="146" alt="image" src="https://github.com/user-attachments/assets/325fd7ae-8be1-4339-9191-11906880f0a0" />
 )
 
 ---
@@ -74,7 +74,7 @@ Each commit stores metadata like author, message, and tree reference.
 
 This shows that all components (object, tree, index, commit) are working together.
 
-![Final](<img width="1600" height="1044" alt="image" src="https://github.com/user-attachments/assets/8951a29f-5e68-4c29-ab35-8d3cfea3f03e" />)
+(<img width="1600" height="1044" alt="image" src="https://github.com/user-attachments/assets/8951a29f-5e68-4c29-ab35-8d3cfea3f03e" />)
 (<img width="2052" height="984" alt="image" src="https://github.com/user-attachments/assets/ebfb0b88-f334-4918-92d3-f09822169be6" />)
 
 
