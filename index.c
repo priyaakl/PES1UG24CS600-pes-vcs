@@ -1,6 +1,7 @@
 // index.c — Staging area implementation
 
 #include "index.h"
+#include "pes.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -115,7 +116,7 @@ int index_load(Index *index) {
 
         char hash_hex[HASH_HEX_SIZE + 1];
 
-        if (fscanf(fp, "%o %64s %ld %ld %s",
+        if (fscanf(fp, "%o %64s %ld %u %s",
                    &e->mode,
                    hash_hex,
                    &e->mtime_sec,
@@ -123,7 +124,7 @@ int index_load(Index *index) {
                    e->path) != 5)
             break;
 
-        hex_to_hash(hash_hex, &e->id);
+        hex_to_hash(hash_hex, &e->hash);
         index->count++;
     }
 
@@ -138,9 +139,9 @@ int index_save(const Index *index) {
 
     for (int i = 0; i < index->count; i++) {
         char hex[HASH_HEX_SIZE + 1];
-        hash_to_hex(&index->entries[i].id, hex);
+        hash_to_hex(&index->entries[i].hash, hex);
 
-        fprintf(fp, "%o %s %ld %ld %s\n",
+        fprintf(fp, "%o %s %ld %u %s\n",
                 index->entries[i].mode,
                 hex,
                 index->entries[i].mtime_sec,
@@ -182,7 +183,7 @@ int index_add(Index *index, const char *path) {
     }
 
     strcpy(entry->path, path);
-    entry->id = id;
+    entry->hash = id;   // direct assignment (IMPORTANT FIX)
     entry->mode = 100644;
     entry->mtime_sec = st.st_mtime;
     entry->size = size;
