@@ -1,7 +1,7 @@
 # PES-VCS Project
 
 ## Student Details
-NAME: PRIYA KL 
+NAME: PRIYA K L 
 SRN: PES1UG24CS600 
 
 ---
